@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+
+body {
+    margin: 0;
+    height: 100vh;
+    cursor: none;
+    align-items: center;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: rgb(69, 74, 82);
+}
+
+.main{
+    margin-bottom: 150px;
+}
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transform: translate(-50%, -50%);
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    padding-top: 10%;
+    padding-bottom: 100px;
+    font-size: 5rem;
+
+}
+
+#general {
+    font-size: 1.5rem;
+    color: cyan;
+}
+
+#general a {
+    font-size: 1.5rem;
+    color: yellow;
+    text-decoration: underline;
+}
+
+#general a:hover {
+    font-size: 1.5rem;
+    color: yellow;
+}
+
+.col-lg-4 {
+    padding-right: -15px;
+}
+
+#baby-mubby{
+    max-width: 300px;
+    max-height: 300px;
+
+}
+
+#bottom-navbar {
+    font-size: 2rem;
+}
+
+#bottom-navbar a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-element{
+    transform: translateY(100%);
+    background-color: yellow;
+}
+
+.nav-element1 {   
+    transform: translateY(0);
+    transition-duration: 1s;
+}
+
+.nav-element2 {
+    transform: translateY(0);
+    transition-duration: 2s;
+}
+
+.nav-element3 {
+    transform: translateY(0);
+    transition-duration: 3s; 
+}
+
+.fadeintransition {
+    animation: fadeInDown 3s;
+}
+
+
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(-20%, -70%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
