@@ -21,6 +21,7 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+/* navigation bar */
 .navbar {
     position: sticky;
     top: 0;
@@ -43,6 +44,7 @@ body {
   .nav-icon {
     font-size: 1.5rem;
   }
+
   .fa-home {
     color: var(--mainBlack);
   }
@@ -61,6 +63,7 @@ body {
     color: var(--mainWhite);
   }
 
+  /* hero image */
   .hero {
     min-height: calc(100vh - 60px);
     background: url("../images/store/card-capital.jfif") center/cover no-repeat;
@@ -95,11 +98,8 @@ body {
     background: transparent;
     color: var(--primaryColor);
   }
-  .smooth-scroll {
-    scroll-behavior: smooth;
-  }
 
-
+  /* products section */
   .products {
     padding: 4rem 0;
   }
@@ -173,7 +173,7 @@ body {
     text-align: center;
   }
 
-/* --------------- Cart ---------------- */
+/* cart */
 .cart-overlay {
   position: fixed;
   top: 0;
@@ -224,7 +224,7 @@ body {
   letter-spacing: var(--mainSpacing);
   margin-bottom: 2rem;
 }
-/*---------- Cart Item -------------------- */
+
 .cart-item {
   display: grid;
   align-items: center;
@@ -256,7 +256,6 @@ body {
   color: var(--primaryColor);
   cursor: pointer;
 }
-/*---------- End of Cart Item -------------------- */
 
 .cart-footer {
   margin-top: 2rem;
@@ -299,6 +298,7 @@ body {
   background: rgb(217, 89, 89);
 }
 
+/* toast */
 .toast {
   visibility: hidden;
   margin: auto;
