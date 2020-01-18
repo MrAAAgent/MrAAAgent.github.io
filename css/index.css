@@ -134,17 +134,17 @@ h1 {
       transform: translate3d(0, 0, 0);
     }
   }
-  .btn-group-vertical {
+
+.btn-group-vertical {
       max-width: 60px;
       padding-right: 15px;
       animation: fadeIn 3s;
-  }
+}
 
-  @keyframes fadeIn {
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(-100%);
-
     }
 
     to {
