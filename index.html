@@ -17,24 +17,27 @@
 
     <body onload="typeWriter(); loadBar()"> 
         <div class="main">
-        <script>
-        var i = 0;
-        var j = 1;
-        var txt = "welcome to mubby's millenium memories";
-        var speed = 50;
-        var navelements = document.getElementsByClassName('nav-element');
+            <!-- functions for onload animations -->
+            <script>
+            var i = 0;
+            var j = 1;
+            var txt = "welcome to mubby's millenium memories";
+            var speed = 50;
+            var navelements = document.getElementsByClassName('nav-element');
     
-        function typeWriter() {
-        if (i < txt.length) {
-        document.getElementById('title').innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);}}
-
-        function loadBar(){
-            for (var j = 1; j <= navelements.length; j++) {
-                navelements[j-1].classList.add('nav-element'+j);
+            function typeWriter() {
+                if (i < txt.length) {
+                document.getElementById('title').innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+                }
             }
-        }
+
+            function loadBar(){
+                for (var j = 1; j <= navelements.length; j++) {
+                navelements[j-1].classList.add('nav-element'+j);
+                }
+            }
         </script>
         
         <!-- custom cursor -->
@@ -49,37 +52,33 @@
                 cursor.style.top = y + "px";
             })
             document.addEventListener('click', () => {
-    cursor.classList.add("expand");
+            cursor.classList.add("expand");
 
-    setTimeout(() => {
-        cursor.classList.remove("expand");
-    }, 500)
-})
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+            }
         </script>
 
-<h1 id="title"> </h1>
+        <h1 id="title"> </h1>
 
-<div class="container-fluid fixed-middle align-middle" id="general">
-<div class="row">
-    <div class="col-lg-4 text-right fadeintransition" id="introduction">hi my name's evan luo! <br> some people call me mubby. <br> i'm currently a student in my <br> 1B term at the <a href="https://uwaterloo.ca/" target="_blank">University of <br> Waterloo</a> pursuing a computer  <br> science degree </div>
-    <div class="col-lg-4 text-center fadeintransition">
-        <img src="images/index/mubby.jpg" id="baby-mubby" alt="photo of baby me" class="img-fluid img-thumbnail center-align">
-    </div>
-    <div class="col-lg-4 text-left fadeintransition">feel free to explore <br> my website where you <br> can find out about some <br> more about me, see <br> some of my projects, <br> and view my resume</div>
-  </div>
-</div>
-</div>
-
-    <div class="container-fluid fixed-bottom text-center align-middle" id="bottom-navbar">
-
+        <div class="container-fluid fixed-middle align-middle" id="general">
             <div class="row">
-            <div class="col-lg-4 nav-element"><a href="aboutme.html" target="_self">about me</a></div>
-            <div class="col-lg-4 nav-element"><a href="projects.html" target="_self">projects</a></div>
-            <div class="col-lg-4 nav-element"><a href="evan-luo-resume.pdf" target="_blank">resume</a></div>
-          </div>
-
+                <div class="col-lg-4 text-right fadeintransition" id="introduction">hi my name's evan luo! <br> some people call me mubby. <br> i'm currently a student in my <br> 1B term at the <a href="https://uwaterloo.ca/" target="_blank">University of <br> Waterloo</a> pursuing a computer  <br> science degree </div>
+                <div class="col-lg-4 text-center fadeintransition">
+                    <img src="images/index/mubby.jpg" id="baby-mubby" alt="photo of baby me" class="img-fluid img-thumbnail center-align">
+                </div>
+                <div class="col-lg-4 text-left fadeintransition">feel free to explore <br> my website where you <br> can find out about some <br> more about me, see <br> some of my projects, <br> and view my resume</div>
             </div>
+        </div>
+        </div>
 
+        <div class="container-fluid fixed-bottom text-center align-middle" id="bottom-navbar">
+            <div class="row">
+                <div class="col-lg-4 nav-element"><a href="aboutme.html" target="_self">about me</a></div>
+                <div class="col-lg-4 nav-element"><a href="projects.html" target="_self">projects</a></div>
+                <div class="col-lg-4 nav-element"><a href="evan-luo-resume.pdf" target="_blank">resume</a></div>
+            </div>
+        </div>
     </body>
-
 </html>
