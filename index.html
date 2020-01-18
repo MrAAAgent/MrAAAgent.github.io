@@ -2,47 +2,84 @@
 <html>
 
     <head>
-        <title>Mubby's Millenium Memories</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>mubby's millenium memories</title>
         <meta name="description" content="website homepage">
         <meta name="author" content="Evan Luo"> 
-        <link rel="stylesheet" href="css/navigationbar.css" type="text/css">
-        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/cursor.css" type="text/css">
     </head>
 
-    <body>
-        <h1>
-            Mubby's Millenium Memories
-            <img src="images/index/yugiNav.png" class="navigationbaryugi"
-            alt="Yugi Muto Avatar"  height="50px" width="60px"/> 
-        </h1>
-
-        <div class="navigationbar">
-            <button class="notdropdown">About Me</button>
-                
-            <div class="dropdown">
-                <button class="dropbtn">Anime </button>
-                <div class="dropdown-content">
-                    <a href="anime.html" target="_self">Posts</a>
-                    <a href="https://myanimelist.net/animelist/MrAAAgent?status=7" target="_blank">MyAnimeList</a>
-                </div>
-            </div>
-
-            <button class="notdropdown">Music</button>
-            
-            <div class="dropdown">
-                <button class="dropbtn">Projects</button>
-                <div class="dropdown-content">
-                    <a href="store.html" target="_self">Store</a>
-                    <a href="#">Meme</a>
-                    <a href="https://github.com/MrAAAgent" target="_blank">GitHub</a>
-                </div>
-            </div>
-        </div>
+    <body onload="typeWriter(); loadBar()"> 
+        <div class="main">
+        <script>
+        var i = 0;
+        var j = 1;
+        var txt = "welcome to mubby's millenium memories";
+        var speed = 50;
+        var navelements = document.getElementsByClassName('nav-element');
     
-        <p class="introduction">
-                Hi my name is Evan Luo. I am currently a first-year computer science student at the University of Waterloo.
-                Glad you stopped by my website! This website is a work in progress; however, you can
-                expect me to post different things surrounding my hobbies or anything that comes up on my mind.  
-        </p>
+        function typeWriter() {
+        if (i < txt.length) {
+        document.getElementById('title').innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);}}
+
+        function loadBar(){
+            for (var j = 1; j <= navelements.length; j++) {
+                navelements[j-1].classList.add('nav-element'+j);
+            }
+        }
+        </script>
+        
+        <!-- custom cursor -->
+        <div class="cursor"></div>
+        <script type="text/javascript">
+            var cursor = document.getElementsByClassName('cursor')[0];
+            document.addEventListener('mousemove',
+            function(event){
+                var x = event.clientX;
+                var y = event.clientY;
+                cursor.style.left= x + "px";
+                cursor.style.top = y + "px";
+            })
+            document.addEventListener('click', () => {
+    cursor.classList.add("expand");
+
+    setTimeout(() => {
+        cursor.classList.remove("expand");
+    }, 500)
+})
+        </script>
+
+<h1 id="title"> </h1>
+
+<div class="container-fluid fixed-middle align-middle" id="general">
+<div class="row">
+    <div class="col-lg-4 text-right fadeintransition" id="introduction">hi my name's evan luo! <br> some people call me mubby. <br> i'm currently a student in my <br> 1B term at the <a href="https://uwaterloo.ca/" target="_blank">University of <br> Waterloo</a> pursuing a computer  <br> science degree </div>
+    <div class="col-lg-4 text-center fadeintransition">
+        <img src="images/index/mubby.jpg" id="baby-mubby" alt="photo of baby me" class="img-fluid img-thumbnail center-align">
+    </div>
+    <div class="col-lg-4 text-left fadeintransition">feel free to explore <br> my website where you <br> can find out about some <br> more about me, see <br> some of my projects, <br> and view my resume</div>
+  </div>
+</div>
+</div>
+
+    <div class="container-fluid fixed-bottom text-center align-middle" id="bottom-navbar">
+
+            <div class="row">
+            <div class="col-lg-4 nav-element"><a href="aboutme.html" target="_self">about me</a></div>
+            <div class="col-lg-4 nav-element"><a href="projects.html" target="_self">projects</a></div>
+            <div class="col-lg-4 nav-element"><a href="evan-luo-resume.pdf" target="_blank">resume</a></div>
+          </div>
+
+            </div>
+
     </body>
+
 </html>
