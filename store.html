@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mubby's Card Shop</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <link rel="stylesheet" href="store.css"/> 
+        <script src="store.js" async></script>
+    </head>
+
+    <body>
+        <!-- navigation bar --> 
+        <nav class="navbar">
+            <div class="navbar-center">
+                <span class="nav-icon">
+                     <i class="fas fa-home"></i>
+                </span>
+                <img src="images/vanguard-zone-logo.png" alt="Mubby's Card Shop Logo"/>
+                <div class="cart-btn">
+                <span class="nav-icon">
+                    <i class="fas fa-cart-plus"></i>
+                </span>
+                <div class="cart-items">0</div>
+                </div>
+            </div>
+        </nav>
+        <!-- end of navigation bar -->
+
+        <!-- hero -->
+        <header class="hero">
+            <div class="banner">
+                <h3 class="banner-title">"Games are not boring. Games purify our souls and leave room for our new development that challenges the mind. They are the products of humans' wisdom." -Seto Kaiba</h3>
+                <a href="#jump-here"><button class="banner-btn" id="look-cards">explore cards</button></a>
+            </div>
+        </header>
+        <!-- end of hero-->
+
+        <!-- products -->
+        <section class="products" id="jump-here">
+            <div class="section-title">
+                <h2>our cards</h2>
+            </div>
+
+            <div class="products-center">
+                <article class="product">
+                    <div class="img-container">
+                        <img src="images/blaster-blade.png" alt="Blaster Blade"
+                        class ="product-img">
+                        <button class="bag-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            add to cart
+                        </button>
+                    </div>
+                    <h3 class="product-name">Blaster Blade</h3>
+                    <h4 class="product-price">$24.21</h4>
+                </article>
+
+                <article class="product">
+                    <div class="img-container">
+                        <img src="images/dragonic-overlord.jpg" alt="Dragonic Overlord"
+                        class ="product-img">
+                        <button class="bag-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            add to cart
+                        </button>
+                    </div>
+                    <h3 class="product-name">Dragonic Overlord</h3>
+                    <h4 class="product-price">$30.23</h4>
+                </article>
+
+                <article class="product">
+                    <div class="img-container">
+                        <img src="images/majesty-lord-blaster.jpg" alt="Majesty Lord Blaster"
+                        class ="product-img"/>
+                        <button class="bag-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            add to cart
+                        </button>
+                    </div>
+                    <h3 class="product-name">Majesty Lord Blaster</h3>
+                    <h4 class="product-price">$67.07</h4>
+                </article>
+
+                <article class="product">
+                    <div class="img-container">
+                        <img src="images/blaster-dark.jpg" alt="Blaster Dark"
+                        class ="product-img"/>
+                        <button class="bag-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            add to cart
+                        </button>
+                    </div>
+                    <h3 class="product-name">Blaster Dark</h3>
+                    <h4 class="product-price">$11.41</h4>
+                </article>
+
+                <article class="product">
+                    <div class="img-container">
+                        <img src="images/asura-kaiser.png" alt="Asura Kaiser"
+                        class ="product-img"/>
+                        <button class="bag-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            add to cart
+                        </button>
+                    </div>
+                    <h3 class="product-name">Asura Kaiser</h3>
+                    <h4 class="product-price">$2.13</h4>
+                </article>
+
+                <article class="product">
+                    <div class="img-container">
+                        <img src="images/ceo-amaterasu.jfif" alt="CEO Amaterasu"
+                        class ="product-img"/>
+                        <button class="bag-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            add to cart
+                        </button>
+                    </div>
+                    <h3 class="product-name">CEO Amaterasu</h3>
+                    <h4 class="product-price">$3.14</h4>
+                </article>
+
+
+            </div>
+        </section>     
+        <!-- end of products -->   
+
+        <!-- cart display -->   
+        <div class="cart-overlay">
+            <div class="cart"> 
+                <span class="close-cart"> 
+                    <i class="fas fa-window-close"></i>
+                </span>
+                <h2>your cart</h2>
+                <div class="cart-content">
+                    
+                    <!-- SAMPLE CART ITEM HTML 
+
+                    <div class="cart-item">
+                        <img src="dragonic overlord.jpg" alt="Dragonic Overlord"/>    
+                    <div>
+                        <h4 class="item-name">Dragonic Overlord</h4>
+                        <h5 class="item-price">$30.23</h5>
+                        <span class="remove-item">remove</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-chevron-up"></i>
+                        <p class="item-amount">2</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    </div> 
+                    
+                    --> 
+                
+                </div>
+
+                <div class="cart-footer">
+                    <h3>Your Total: $<span class="cart-total">0</span></h3>
+                    <button class="clear-cart banner-btn">clear cart</button>
+                </div>
+
+                <nav class="checkout">
+                    <button class="checkout-btn banner-btn">checkout</button>
+                </nav>
+
+            </div>
+        </div>
+        <!-- end of cart display --> 
+
+        <!-- pop up toasts --> 
+        <div class="toast" id="alreadyincart">This item is already in your cart!</div>
+        <div class="toast" id="emptycart">Your cart is already empty!</div>
+        <div class="toast" id="purchasenothing">Sorry there is nothing in your cart to checkout.</div>
+        <div class="toast" id="thanks">Good doing business with you! You are always welcome to visit Mubby's card shop anytime!..</div>
+        <!-- end of pop up toasts --> 
+    
+    </body>
+</html>
