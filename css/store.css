@@ -59,7 +59,7 @@ body {
 
   .hero {
     min-height: calc(100vh - 60px);
-    background: url("images/card-capital.jfif") center/cover no-repeat;
+    background: url("images/store/card-capital.jfif") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
