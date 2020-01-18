@@ -1,0 +1,82 @@
+* {
+    background-image: url(background.gif);
+  }
+  
+  
+  h1 {
+    font-family:'Impact', fantasy;
+    font-size: 2.8em;
+    margin: 0 30px 5px 0;
+    color:crimson;
+    text-decoration:none;
+  }
+  
+  .navigationbar {
+    overflow: hidden;
+    font-family: monospace;
+    margin: 0 0 0 -15px;
+    background-image: none;
+    background-color: gold;
+    font-size:1.2em;
+  }
+  
+  .navigationbar .notdropdown {
+    background-image: none;
+    background-color: gold;
+    float: left;
+    color:black;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-family: inherit;
+    border: none;
+    outline: none;
+  }
+  
+  .dropdown {
+    background-image: none;
+    background-color: gold;
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 1.8em;
+    background-image: none;
+    background-color: inherit;
+    padding: 5px 16px;
+    border: none;
+    outline: none;
+    color: black;
+    font-family: inherit; 
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-image: none;
+    background-color: #f9f9f9;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: white;
+    text-decoration: none;
+    background-image: none;
+    background-color: gray;
+    display: block;
+    text-align: left;
+    padding: 5px;
+    font-size: 1.4em;
+  }
+  
+  .dropdown-content a:hover, .notdropdown:hover, .dropdown:hover{
+    background-color: orange;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
