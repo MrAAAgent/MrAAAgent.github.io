@@ -42,7 +42,7 @@
         
         <!-- custom cursor -->
         <div class="cursor"></div>
-        <script type="text/javascript">
+        <script>
             var cursor = document.getElementsByClassName('cursor')[0];
             document.addEventListener('mousemove',
             function(event){
@@ -57,7 +57,7 @@
             setTimeout(() => {
                 cursor.classList.remove("expand");
             }, 500)
-            }
+            })
         </script>
 
         <!-- website greetings -->
