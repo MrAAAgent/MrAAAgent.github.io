@@ -1,20 +1,41 @@
-h1 a {
-    color: orangered;
-    text-decoration: none;
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.aboutmecontent{
-    position: absolute;
-    top: 140px;
-    left: 15px;
-    font-size: 1.2em;
-    font-family: 'Trebuchet MS', Arial, sans-serif;
-    color: white;
-    width: 720px;
+body {
+  font-family:"Lato", sans-serif;
+  background: url("../images/aboutme/naruto-wallpaper.png");
+  color: white;
 }
 
-.funfacts{
-    padding-left: 25px;
-    list-style-type: square;
+.aboutme {
+  font-size: 4rem;
+  color: red;
 }
 
+.row {
+  padding: 10px 0px 10px 0px;
+}
+
+.zig1 {
+  background-color: rgb(255, 227, 176);
+  opacity: 90%;
+  color: black;
+}
+
+.zig2 {
+  background-color: rgb(202, 89, 76);
+  color: white;
+  opacity: 90%;
+}
+
+.fa-home {
+  color: white;
+}
+
+#content {
+  margin-bottom: 20px;
+}
